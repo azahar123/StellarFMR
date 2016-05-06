@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey">
+
+    <include
+        android:id="@+id/posm_header"
+        layout="@layout/include_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp" />
+
+    <include
+        android:id="@+id/posm_loc"
+        layout="@layout/include_header_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/posm_header" />
+
+    <include
+        android:id="@+id/posm_tabs"
+        layout="@layout/include_selector_tab_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/posm_loc"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/posm_tabs"
+        android:layout_above="@+id/checkBoxInsentive"
+        android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <RelativeLayout
+            android:id="@+id/posm_tab1_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/posm_order"
+                layout="@layout/include_posm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <ListView
+                android:id="@+id/posm_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/posm_order"
+                android:paddingTop="10dp"
+                android:visibility="gone"></ListView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/posm_list">
+
+                <LinearLayout
+                    android:id="@+id/posm_insert_point"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/posm_tab2_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/lin_posm_sel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+
+                <TextView
+                    android:id="@+id/posm_select_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:drawableRight="@drawable/dropdownarrow"
+                    android:gravity="center"
+                    android:text="Select Brand"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="16sp" />
+
+                <!-- <Spinner
+                     android:id="@+id/posm_spinner_brand"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center">
+                 </Spinner>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_posm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_posm_sel"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/posm_model"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.4"
+                    android:paddingLeft="10dp"
+                    android:text="POSM"
+                    android:textColor="@color/action_bar"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/posm_avl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.6"
+                    android:gravity="right"
+                    android:paddingRight="10dp"
+                    android:text="Available"
+                    android:textColor="@color/action_bar"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/posm_comp_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lin_posm"
+                android:layout_marginTop="10dp"></ListView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/posm_comp_list"
+                android:layout_marginBottom="25dp">
+
+                <LinearLayout
+                    android:id="@+id/posm_insert_pointCompetitor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </ScrollView>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/posm_comm_rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/posm_add_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:hint="ADD COMMENTS"
+                android:lines="2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/darkBlue"
+                android:textColorHint="@color/lightBlue"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/posm_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/posm_add_comments"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/pictureicon"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:text="Photo"
+                android:textColor="@color/lightBlue"
+                android:textSize="20sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/posm_photo"
+                android:layout_marginBottom="25dp">
+
+                <LinearLayout
+
+                    android:id="@+id/posm_insert_point_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/checkBoxInsentive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Incentive Scheme"
+        android:layout_above="@+id/posm_update"
+        android:layout_centerHorizontal="true" />
+
+    <include
+        android:id="@+id/posm_update"
+        layout="@layout/update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+
+</RelativeLayout>

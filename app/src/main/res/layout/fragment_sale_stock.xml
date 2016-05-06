@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkGrey">
+
+    <include
+        android:id="@+id/sale_stock_header"
+        layout="@layout/include_header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp" />
+
+    <include
+        android:id="@+id/sale_stock_loc"
+        layout="@layout/include_header_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sale_stock_header" />
+
+    <include
+        android:id="@+id/sale_stock_tabs"
+        layout="@layout/include_selector_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sale_stock_loc"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/sale_stock_update"
+        android:layout_below="@+id/sale_stock_tabs"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <include
+                android:id="@+id/sale_stock_order"
+                layout="@layout/include_sales_stock_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sale_stock_order"
+                android:layout_marginBottom="25dp">
+
+                <LinearLayout
+                    android:id="@+id/sso_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/sale_stock_order_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:orientation="vertical" />
+
+
+                </LinearLayout>
+            </ScrollView>
+
+            <ListView
+                android:id="@+id/sale_stock_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sale_stock_order"
+                android:descendantFocusability="afterDescendants"
+                android:focusable="false"
+                android:paddingTop="10dp"
+                android:visibility="gone"></ListView>
+
+            <RelativeLayout
+                android:id="@+id/sale_stock_comm_rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/sales_stock_add_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal"
+                    android:hint="ADD COMMENTS"
+                    android:lines="4"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:textColor="@color/darkBlue"
+                    android:textColorHint="@color/lightBlue"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/ss_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sales_stock_add_comments"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:drawableLeft="@drawable/pictureicon"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="Photo"
+                    android:textColor="@color/lightBlue"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ss_photo"
+                    android:layout_marginBottom="25dp">
+
+                    <LinearLayout
+
+                        android:id="@+id/site_insert_point_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/sale_stock_update"
+        layout="@layout/update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+
+
+</RelativeLayout>

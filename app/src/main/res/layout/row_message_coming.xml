@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/jr_loc"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/location" />
+
+    <TextView
+        android:id="@+id/jr_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/jr_loc"
+        android:text="MASSA"
+        android:ellipsize="end"
+        android:scrollHorizontally="true"
+        android:paddingRight="10dp"
+        android:textColor="@color/action_bar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_toLeftOf="@+id/jr_time"
+        android:layout_toStartOf="@+id/jr_time" />
+
+    <TextView
+        android:id="@+id/jr_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="1.30pm"
+        android:textColor="@color/action_bar"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/jr_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/jr_name"
+        android:layout_below="@+id/jr_name"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:maxLines="2"
+        android:layout_toLeftOf="@+id/jr_time"
+        android:text="Jeddah, Prince Metab Market Mohmmad - 557009007"
+        android:textSize="14sp" />
+
+
+
+</RelativeLayout>

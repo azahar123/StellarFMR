@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/darkGrey">
+
+
+    <RelativeLayout
+        android:id="@+id/profile_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGrey"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
+
+
+        <com.huawei.stellarfmr.stellarfmr.utils.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/photodefault"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/profile_image">
+
+            <TextView
+                android:id="@+id/profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="AZHAR SHEIKH"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/profile_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/profile_name"
+                android:layout_below="@+id/profile_name"
+                android:text="DUBAI"
+                android:textColor="@color/primary_dark"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/profile_login_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/profile_name"
+                android:layout_below="@+id/profile_location"
+                android:layout_marginTop="10dp"
+                android:text="Login Time: 9:00 AM"
+                android:textColor="@color/primary_dark"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/linear_tabs"
+        layout="@layout/include_selector_tabs"
+        android:layout_below="@+id/profile_header"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+
+    <ListView
+        android:id="@+id/journey_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_tabs"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="15dp"
+        android:background="@color/white">
+
+    </ListView>
+
+    <ListView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear_tabs"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+    </ListView>
+
+</RelativeLayout>

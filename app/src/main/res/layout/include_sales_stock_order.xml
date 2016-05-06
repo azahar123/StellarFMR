@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:weightSum="5"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/lightBlue"
+        android:paddingLeft="10dp"
+        android:gravity="left"
+        android:text="MODEL"
+        android:layout_weight="2"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/lightBlue"
+        android:text="Sale"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/lightBlue"
+        android:gravity="center"
+        android:text="Stock"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/lightBlue"
+        android:gravity="center"
+        android:text="Order"
+        android:layout_weight="1"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

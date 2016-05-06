@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="action_bar">#658DB8</color>
+    <color name="primary_dark">#003333</color>
+    <color name="background">#658DB8</color>
+    <color name="lightGrey">#f6f6f6</color>
+    <color name="darkGrey">#f1f1f1</color>
+    <color name="darkBlue">#334960</color>
+    <color name="lightBlue">#658DB8</color>
+    <color name="darkBlueTrans">#dd334960</color>
+    <color name="ligtBlueTrans">#dd658DB8</color>
+    <color name="white">#ffffff</color>
+
+
+    <array name="letter_tile_colors">
+        <item>#658DB8</item>
+    </array>
+
+</resources>
